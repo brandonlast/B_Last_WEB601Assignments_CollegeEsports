@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import ContentList from '../helper-files/content-list';
 import Content from '../helper-files/content-interface';
 
 @Component({
@@ -10,11 +9,11 @@ import Content from '../helper-files/content-interface';
   templateUrl: './content-card.component.html',
   styleUrl: './content-card.component.scss'
 })
-export class ContentCardComponent {
-  contentList: ContentList = new ContentList();
+export class ContentCardComponent implements OnInit {
+  contentList: Content[] = [];
 
   constructor() {
-    this.contentList.add({
+    this.contentList.push({
       id: 1,
       title: 'Saints COD',
       description: 'This is the St Clair College Call of Duty Team',
@@ -24,7 +23,7 @@ export class ContentCardComponent {
       tags: ['FPS', 'CallOfDuty']
     });
 
-    this.contentList.add({
+    this.contentList.push({
       id: 1,
       title: 'Saints VAL',
       description: 'This is the St Clair College Valorant Team',
@@ -34,7 +33,7 @@ export class ContentCardComponent {
       tags: ['FPS', 'Valorant']
     });
 
-    this.contentList.add({
+    this.contentList.push({
       id: 1,
       title: 'Saints RL',
       description: 'This is the St Clair College Rocket League Team',
