@@ -8,7 +8,7 @@ import { ContentCardComponent } from '../content-card/content-card.component';
   standalone: true,
   imports: [CommonModule, ContentCardComponent],
   templateUrl: './content-list.component.html',
-  styleUrl: './content-list.component.scss',
+  styleUrl: './content-list.component.scss'
 })
 export class ContentListComponent implements OnInit {
   contentItems: Content[] = [
