@@ -1,10 +1,13 @@
 import { Component, Input } from '@angular/core';
 import Content from '../helper-files/content-interface';
+import { ContentTypeFilterPipe } from '../pipes/content-filter.pipe';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-content-card',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './content-card.component.html',
   styleUrl: './content-card.component.scss'
 })

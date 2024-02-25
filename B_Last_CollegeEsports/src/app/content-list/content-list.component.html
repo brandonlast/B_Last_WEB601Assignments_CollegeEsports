@@ -1,4 +1,23 @@
+<div>
+  <input type="text" [(ngModel)]="searchTitle" placeholder="Enter title">
+  <button (click)="checkTitle()">Search</button>
+</div>
+<div *ngIf="searched && !titleExists" style="color: red;">Content item with title "{{ searchTitle }}" does not exist.</div>
+<div *ngIf="searched && titleExists" style="color: green;">Content item with title "{{ searchTitle }}" exists.</div>
 
 <div class="content-list">
-    <app-content-card *ngFor="let contentItem of contentItems; let i = index" [content]="contentItem"></app-content-card>
+  <h2>No Type Set</h2>
+  <div *ngFor="let contentItem of contentItems | contentTypeFilter">
+    <app-content-card [content]="contentItem"></app-content-card>
   </div>
+
+  <h2>Varsity</h2>
+  <div *ngFor="let contentItem of contentItems | contentTypeFilter: 'Varsity'">
+    <app-content-card [content]="contentItem"></app-content-card>
+  </div>
+
+  <h2>Academy</h2>
+  <div *ngFor="let contentItem of contentItems | contentTypeFilter: 'Academy'">
+    <app-content-card [content]="contentItem"></app-content-card>
+  </div>
+</div>
