@@ -1,8 +1,13 @@
-<div class="content-card" (click)="onImageClick()" [ngClass]="{'type-varsity': content?.type === 'Varsity', 'type-academy': content?.type === 'Academy', 'type-other': !content?.type}">
+<div class="content-card" (click)="onImageClick()" [ngClass]="{'type-varsity': content?.type === 'Varsity', 'type-academy': content?.type === 'Academy', 'type-other': !content?.type}" appHover="border">
     <h2>{{ content?.title }}</h2>
-    <img [src]="content?.imgURL" alt="{{ content?.title }}" />
+    <img *ngIf="content?.imgURL; else defaultImage" [src]="content?.imgURL" alt="{{ content?.title }}" />
+    <ng-template #defaultImage>
+      <img src="https://news.stclair-src.org/sites/default/files/styles/crop_thumbnail/public/articles/2018-09/SaintsGaming_COLOUR_0.png?itok=tFE6ebqv" alt="Saints Gaming Logo" />
+    </ng-template>
     <p>Description: {{ content?.description }}</p>
     <p>Creator: {{ content?.creator }}</p> <br>
-    <p>Type: {{ content?.type }}</p><br>
-    <p>Tags: {{ content?.tags?.join(', ') }}</p>
+    <p>Type: </p>
+    <p appHover="underline">{{ content?.type }}</p> <br>
+    <p>Tags:</p> 
+    <p *ngFor="let tag of content?.tags" appHover="bold">{{ tag }}--</p>
   </div>

@@ -9,6 +9,7 @@ interface Content {
     type?: string;
     tags?: string[];
     selected?: boolean;
+    hoverAffect?: boolean;
 }
 
 export default Content;

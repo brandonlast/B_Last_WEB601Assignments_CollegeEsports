@@ -4,6 +4,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentTypeFilterPipe } from './pipes/content-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { HoverDirective } from './hover.directive';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.scss'
 
 })
+
 export class AppComponent {
   title = 'B_Last_CollegeEsports';
 }

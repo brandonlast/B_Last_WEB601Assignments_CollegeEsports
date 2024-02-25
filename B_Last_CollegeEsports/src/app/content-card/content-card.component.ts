@@ -3,11 +3,12 @@ import Content from '../helper-files/content-interface';
 import { ContentTypeFilterPipe } from '../pipes/content-filter.pipe';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HoverDirective } from '../hover.directive';
 
 @Component({
   selector: 'app-content-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HoverDirective],
   templateUrl: './content-card.component.html',
   styleUrl: './content-card.component.scss'
 })
@@ -24,3 +25,4 @@ export class ContentCardComponent {
   }
 
 }
+

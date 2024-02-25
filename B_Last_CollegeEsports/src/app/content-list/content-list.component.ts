@@ -76,7 +76,7 @@ export class ContentListComponent implements OnInit {
       title: 'Zarin Bartholomew',
       description: 'This is the St Clair College Call of Duty Team Coach',
       creator: 'Zarin Bartholomew',
-      imgURL: 'https://images.squarespace-cdn.com/content/v1/58869a29e4fcb5de2d6238bb/93036509-3482-4c27-8912-8305f3416078/OneDayOut.png?format=300w',
+      imgURL: 'https://images.squarespace-cdn.com/content/v1/58869a29e4fcb5de2d6238bb/c648a34a-ec5b-4c41-bbcb-222ee999a703/Zaarin.png?format=300w',
       type: '',
       tags: ['FPS', 'CallOfDuty']
     },
@@ -85,7 +85,14 @@ export class ContentListComponent implements OnInit {
       title: 'Justin Parent',
       description: 'This is the St Clair College Call of Duty Team Captain',
       creator: 'Dawson Lovell',
-      imgURL: 'https://images.squarespace-cdn.com/content/v1/58869a29e4fcb5de2d6238bb/93036509-3482-4c27-8912-8305f3416078/OneDayOut.png?format=300w',
+      imgURL: 'https://images.squarespace-cdn.com/content/v1/58869a29e4fcb5de2d6238bb/095e5194-7265-4eec-a159-1618b90954ad/Priestly.png?format=300w',
+      tags: ['FPS', 'CallOfDuty']
+    },
+    {
+      id: 8,
+      title: 'Francis Biller',
+      description: 'This is the St Clair College Call of Duty Team Player',
+      creator: 'Brandon Last',
       tags: ['FPS', 'CallOfDuty']
     }
   ];
