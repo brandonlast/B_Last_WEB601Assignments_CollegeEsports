@@ -4,10 +4,10 @@
     <ng-template #defaultImage>
       <img src="https://news.stclair-src.org/sites/default/files/styles/crop_thumbnail/public/articles/2018-09/SaintsGaming_COLOUR_0.png?itok=tFE6ebqv" alt="Saints Gaming Logo" />
     </ng-template>
-    <p>Description: {{ content?.description }}</p>
+    <p>Description: {{ content?.description }}</p><br>
     <p>Creator: {{ content?.creator }}</p> <br>
     <p>Type: </p>
     <p appHover="underline">{{ content?.type }}</p> <br>
     <p>Tags:</p> 
-    <p *ngFor="let tag of content?.tags" appHover="bold">{{ tag }}--</p>
+    <p *ngFor="let tag of tagsArray" appHover="bold">{{ tag }},</p>
   </div>

@@ -23,6 +23,12 @@ export class ContentCardComponent {
       console.log(`Clicked on Image - ID: ${this.content.id}, Title: ${this.content.title}`);
     }
   }
+  get tagsArray(): string[] {
+    if (typeof this.content?.tags === 'string') {
+      return [this.content?.tags];
+    }
+    return this.content?.tags || [];
+  }
 
 }
 
