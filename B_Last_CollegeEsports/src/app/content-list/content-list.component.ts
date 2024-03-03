@@ -94,6 +94,13 @@ export class ContentListComponent implements OnInit {
       description: 'This is the St Clair College Call of Duty Team Player',
       creator: 'Brandon Last',
       tags: ['FPS', 'CallOfDuty']
+    },
+    {
+      id: 8,
+      title: 'Trent Sovran',
+      description: 'This is the St Clair College Call of Duty Team Analyst',
+      creator: 'Dawson Lovell',
+      tags: ['FPS', 'CallOfDuty']
     }
   ];
     searchTitle: string = '';
