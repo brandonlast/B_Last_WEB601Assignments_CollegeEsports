@@ -14,6 +14,7 @@ import { HoverDirective } from '../hover.directive';
 })
 export class ContentCardComponent {
   @Input() content: Content | undefined;
+  @Input() isTopContent: boolean = false;
 
   constructor() {
     
