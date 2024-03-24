@@ -8,13 +8,17 @@ import { ContentTypeFilterPipe } from './pipes/content-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { HoverDirective } from './hover.directive';
 import { CollegeEsportsService } from './services/college-esports.service';
-import { MessageService } from './messages/messages.component';
+import { MessageService } from './message.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './services/in-memory-data.service';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ContentCardComponent, ContentListComponent, FormsModule, CommonModule],
+  imports: [RouterOutlet,ContentCardComponent, ContentListComponent, FormsModule, CommonModule, InMemoryDataService, HttpClientInMemoryWebApiModule, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

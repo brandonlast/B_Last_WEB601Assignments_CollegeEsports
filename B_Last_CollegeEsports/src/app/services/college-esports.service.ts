@@ -4,24 +4,35 @@ import contentArray from '../helper-files/contentDb';
 import Content from '../helper-files/content-interface';
 import { CommonModule } from '@angular/common';
 import { MessageService } from '../message.service';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CollegeEsportsService {
-    constructor(private messageService: MessageService) {}
 
+  private apiUrl = 'api/contents';
+  private httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+  constructor(
+    private http: HttpClient,
+    private messageService: MessageService
+  ) {}
+
+  
     getContentArray(): Observable<Content[]> {
         this.messageService.add('Content array loaded!');
-        return of(contentArray);
+        return this.http.get<Content[]>(this.apiUrl);
+      }
+
+      addContent(newContent: Content): Observable<Content> {
+        return this.http.post<Content>(this.apiUrl, newContent, this.httpOptions);
       }
 
       getContentById(id: number): Observable<Content | undefined> {
-        const contentItem = contentArray.find(item => item.id === id);
-        if (contentItem) {
-          this.messageService.add(`Content Item at id: ${id}`);
-        }
-        return of(contentItem);
+        const url = `${this.apiUrl}/${id}`;
+        this.messageService.add(`Content Item at id: ${id}`);
+        return this.http.get<Content>(url);
       }
-}
+    }

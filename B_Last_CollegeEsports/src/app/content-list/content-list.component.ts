@@ -6,11 +6,13 @@ import { ContentTypeFilterPipe } from '../pipes/content-filter.pipe';
 import { ContentFilterModule } from '../pipes/content-filter.component';
 import { FormsModule } from '@angular/forms';
 import { CollegeEsportsService } from '../services/college-esports.service';
+import { ModifyContentComponent } from '../modify-content/modify-content.component'
+
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, FormsModule, ContentFilterModule],
+  imports: [CommonModule, ContentCardComponent, FormsModule, ContentFilterModule, ModifyContentComponent],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })

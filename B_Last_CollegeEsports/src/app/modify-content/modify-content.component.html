@@ -1,0 +1,13 @@
+<div>
+    <label>Title:</label>
+    <input [(ngModel)]="newContent.title" type="text" placeholder="Enter title"><br>
+  
+    <label>Description:</label>
+  <input [(ngModel)]="newContent.description" type="text" placeholder="Enter description"><br>
+
+  <label>Creator:</label>
+  <input [(ngModel)]="newContent.creator" type="text" placeholder="Enter creator"><br>
+
+  
+    <button (click)="addContent()">Add Content</button>
+  </div>

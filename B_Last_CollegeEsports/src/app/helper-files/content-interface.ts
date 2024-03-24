@@ -1,7 +1,7 @@
 
 
 interface Content {
-    id: number;
+    id: number | null;
     title: string;
     description: string;
     creator: string;
